@@ -1,6 +1,6 @@
 cresa x3
 jabolko x5
 portokal x7
-citron x6
+domat x6
 mandarina x4
 
