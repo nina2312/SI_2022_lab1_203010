@@ -1,0 +1,271 @@
+Lenovo@DESKTOP-009CMBP MINGW64 ~
+$ git config --global user.name "nina2312"
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~
+$ git config --global user.email "nikolinagrujova23@gmail.com"
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~
+$ git clone https://github.com/nina2312/SI_2022_lab1_203010.git
+Cloning into 'SI_2022_lab1_203010'...
+fatal: unable to access 'https://github.com/nina2312/SI_2022_lab1_203010.git/': Could not resolve host: github.com
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~
+$ git clone https://github.com/nina2312/SI_2022_lab1_203010.git
+Cloning into 'SI_2022_lab1_203010'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~
+$ cd SI_2022_lab1_203010
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ ls
+README.md  shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master b71db6a] Add 5 items to the shopping list
+ 1 file changed, 6 insertions(+)
+ create mode 100644 shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git commit -a -m "Add quantities to the items"
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[master d23aa63] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git branch branch1
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git branch branch2
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git log
+commit d23aa63f2356d8869b0dfdc8475f6e17cb654320 (HEAD -> master, branch2, branch1)
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:47:20 2022 +0200
+
+    Add quantities to the items
+
+commit b71db6a676900147b213bee7cee13ce5f187f058
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:44:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7141160d0730218bb1c853251732f6f78abf19ba (origin/master, origin/HEAD)
+Author: Nikolina Grujova <100199831+nina2312@users.noreply.github.com>
+Date:   Thu Apr 7 10:38:12 2022 +0200
+
+    Update README.md
+
+commit e75be2a966915428e630b981affc7b7c87046373
+Author: Nikolina Grujova <100199831+nina2312@users.noreply.github.com>
+Date:   Thu Apr 7 10:32:29 2022 +0200
+
+    Initial commit
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 664 bytes | 132.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nina2312/SI_2022_lab1_203010.git
+   7141160..d23aa63  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch1)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch1)
+$ git commit -a -m "Change quantity of item #5"
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[branch1 9f381bb] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git commit -a -m "Change quantity of item #2"
+[master 153c42b] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git push -u origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 891 bytes | 178.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/nina2312/SI_2022_lab1_203010.git
+   d23aa63..0b7f201  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ git commit -a -m "Modify item #4"
+[branch2 476211e] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ git log
+commit 476211e8885e5c762565a6b6e7a512f9ff0c5bf5 (HEAD -> branch2)
+commit 476211e8885e5c762565a6b6e7a512f9ff0c5bf5 (HEAD -> branch2)
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 15:03:15 2022 +0200
+
+    Modify item #4
+
+commit d23aa63f2356d8869b0dfdc8475f6e17cb654320
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:47:20 2022 +0200
+
+    Add quantities to the items
+
+commit b71db6a676900147b213bee7cee13ce5f187f058
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:44:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7141160d0730218bb1c853251732f6f78abf19ba
+Author: Nikolina Grujova <100199831+nina2312@users.noreply.github.com>
+Date:   Thu Apr 7 10:38:12 2022 +0200
+
+    Update README.md
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ git commit -a -m "Modify item #4 and add item #6"
+[branch2 f0427aa] Modify item #4 and add item #6
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ git log
+commit f0427aa958c848388d9269d7c6843ce30cb0f5a5 (HEAD -> branch2)
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 15:07:56 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 476211e8885e5c762565a6b6e7a512f9ff0c5bf5
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 15:03:15 2022 +0200
+
+    Modify item #4
+
+commit d23aa63f2356d8869b0dfdc8475f6e17cb654320
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:47:20 2022 +0200
+
+    Add quantities to the items
+
+commit b71db6a676900147b213bee7cee13ce5f187f058
+Author: nina2312 <nikolinagrujova23@gmail.com>
+Date:   Fri Apr 8 14:44:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7141160d0730218bb1c853251732f6f78abf19ba
+Author: Nikolina Grujova <100199831+nina2312@users.noreply.github.com>
+Date:   Thu Apr 7 10:38:12 2022 +0200
+
+    Update README.md
+
+commit e75be2a966915428e630b981affc7b7c87046373
+Author: Nikolina Grujova <100199831+nina2312@users.noreply.github.com>
+Date:   Thu Apr 7 10:32:29 2022 +0200
+
+    Initial commit
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (branch2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master|MERGING)
+$ nano shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master|MERGING)
+$ git add shopping_list.txt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master|MERGING)
+$ git commit -m "Popravanje na konflikt"
+[master 771c20f] Popravanje na konflikt
+
+Lenovo@DESKTOP-009CMBP MINGW64 ~/SI_2022_lab1_203010 (master)
+$ nano shopping_list.txt
